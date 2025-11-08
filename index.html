@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="darkreader-lock">
+    <title>Emoji Favicon Generator</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😩</text></svg>"
+    />
+    <link rel="stylesheet" href="assets/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Emoji Favicon Generator</h1>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <div class="browser-preview-section">
+          <div class="browser-window">
+            <div class="browser-header">
+              <div class="browser-tabs">
+                <div class="browser-tab active">
+                  <div class="tab-favicon" id="preview-favicon">😩</div>
+                  <div
+                    class="tab-title"
+                    contenteditable="true"
+                    spellcheck="false"
+                  >
+                    Your Website
+                  </div>
+                  <div class="tab-close" id="preview-tab-close">×</div>
+                </div>
+                <!-- Habbo Hotel Sounds from: https://www.habborator.org/trax/index.html -->
+                <div class="browser-tab">
+                  <div class="tab-favicon">🏩</div>
+                  <div class="tab-title">Habbo Hotel</div>
+                  <div class="tab-close">×</div>
+                </div>
+                <div class="browser-tab">
+                  <div class="tab-favicon">📠</div>
+                  <div class="tab-title">America Online</div>
+                  <div class="tab-close">×</div>
+                </div>
+                <div class="new-tab-button">+</div>
+              </div>
+            </div>
+            <div class="browser-toolbar">
+              <div class="navigation-buttons">
+                <button class="nav-button">←</button>
+                <button class="nav-button">→</button>
+                <button class="nav-button">↻</button>
+              </div>
+              <div class="address-bar">
+                <div class="address-icon">🔒</div>
+                <div
+                  class="address-text"
+                  contenteditable="true"
+                  spellcheck="false"
+                >
+                  https://yourwebsite.com
+                </div>
+              </div>
+              <div class="browser-menu-container">
+                <button class="browser-menu">⋮</button>
+                <div class="browser-dropdown" id="browser-dropdown">
+                  <div class="dropdown-item">
+                    <span class="dropdown-emoji">🤫</span>
+                    <span class="dropdown-text"
+                      >Psst… You can edit tab title and URL!</span
+                    >
+                  </div>
+                  <div class="dropdown-item" id="install-antivirus">
+                    <span class="dropdown-emoji">🦠</span>
+                    <span class="dropdown-text">Install Antivirus</span>
+                  </div>
+                  <div class="dropdown-item tools-link">
+                    <span class="dropdown-emoji">🛠️</span>
+                    <span class="dropdown-text">More tools</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="antivirus-toolbar"
+              id="antivirus-toolbar"
+              style="display: none"
+            >
+              <div class="antivirus-search">
+                <span class="search-magnifier">🔍</span>
+                <span class="search-text">MySearch</span>
+                <span class="search-arrow">▼</span>
+                <button class="antivirus-btn prize-btn">🎁 Claim Prize</button>
+                <button class="antivirus-btn webcam-btn">
+                  📹 Free Webcams
+                </button>
+                <button class="antivirus-btn bonzi-btn">😈 BonziBUDDY!</button>
+                <button class="antivirus-btn malware-btn">
+                  🚨 Virus Detected
+                </button>
+              </div>
+            </div>
+            <div class="browser-content">
+              <div class="emoji-input-container">
+                <input
+                  type="text"
+                  id="emoji-input"
+                  placeholder="😩"
+                  maxlength="2"
+                  value="😩"
+                />
+                <div class="emoji-picker-hint">
+                  <small>Enter any emoji to generate a favicon</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Design (hidden on desktop) -->
+        <div class="mobile-design-section">
+          <div class="mobile-container">
+            <div class="mobile-header">
+              <div class="mobile-favicon-preview" id="mobile-favicon">😩</div>
+              <h2 class="mobile-title">Emoji Favicon</h2>
+            </div>
+
+            <div class="mobile-emoji-input">
+              <input
+                type="text"
+                id="mobile-emoji-input"
+                placeholder="Enter emoji"
+                maxlength="2"
+                value="😩"
+              />
+              <button id="mobile-generate-btn" class="mobile-btn">
+                Generate
+              </button>
+            </div>
+
+            <div class="mobile-preview">
+              <div class="preview-card">
+                <div class="preview-favicon" id="mobile-preview-favicon">
+                  😩
+                </div>
+                <div class="preview-text">Your favicon will appear here</div>
+              </div>
+            </div>
+
+            <div class="mobile-output">
+              <h3>Generated Code</h3>
+              <div class="code-output" id="mobile-output-text">
+                <link
+                  rel="icon"
+                  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>😩</text></svg>"
+                />
+              </div>
+              <button id="mobile-copy-btn" class="mobile-btn copy-mobile-btn">
+                Copy Code
+              </button>
+            </div>
+
+            <div class="mobile-tabs-section">
+              <h3>Interactive Tabs</h3>
+              <div class="mobile-tabs">
+                <div class="mobile-tab active" data-sound="none">
+                  <div class="mobile-tab-favicon">😩</div>
+                  <div class="mobile-tab-title">Your Website</div>
+                </div>
+                <div class="mobile-tab" data-sound="jackin">
+                  <div class="mobile-tab-favicon">🏩</div>
+                  <div class="mobile-tab-title">Habbo Hotel</div>
+                </div>
+                <div class="mobile-tab" data-sound="aol">
+                  <div class="mobile-tab-favicon">📠</div>
+                  <div class="mobile-tab-title">America Online</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="output-section">
+          <div class="output-header">
+            <label for="output-text">Generated HTML</label>
+            <button
+              id="copy-btn"
+              class="btn copy-btn"
+              title="Copy to clipboard"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path
+                  d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                ></path>
+              </svg>
+              Copy
+            </button>
+          </div>
+          <textarea id="output-text" readonly></textarea>
+        </div>
+      </main>
+    </div>
+
+    <script src="assets/javascripts/script.js"></script>
+  </body>
+</html>
